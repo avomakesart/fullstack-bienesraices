@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paginas",
+  "info": {
+    "name": "Paginas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "contenido": {
+      "type": "text"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
